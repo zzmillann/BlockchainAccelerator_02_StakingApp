@@ -1,3 +1,26 @@
+OBJETIVO : Hacer una Staking App es decir unna app que tu puedes guardar o depositar tokens con una logica y un tiempo
+
+Como recompensa por este deposito recives una recompensa
+
+PASOS
+- Crear Token
+- Crear Staking App
+- Que devuelva native coin = ether
+- Testing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Foundry
 
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
