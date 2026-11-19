@@ -7,18 +7,10 @@ import "../lib/forge-std/src/Test.sol";
 import "../src/StakingApp.sol";
 
 contract StakingAppTest is Test {
-   
     StakingApp stakingapp;
-    address public addressToken = makeAddr("token");   // dirección de prueba para el token
+    address public addressToken = makeAddr("token"); // dirección de prueba para el token
 
-
-        function setUp() public  {
-            
-            stakingapp = new StakingApp(addressToken);
-
-        }
-
-    
-   
-
+    function setUp() public {
+      //  stakingapp = new StakingApp(addressToken);
+    }
 }
