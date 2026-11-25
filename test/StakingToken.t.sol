@@ -22,8 +22,6 @@ contract StakingTokenTest is Test {
 
 
 
-
-
     function testStakingTokenMinstsCorrectly()  public {
 
         vm.startPrank(randomAddress);
@@ -32,16 +30,12 @@ contract StakingTokenTest is Test {
 
         uint256 amount = 1 ether; // Variable de la cantidad que vamos a mintear
 
-
-
-
-
         stakingtoken.mint(amount); // Minteamos esa cantidad
 
         uint balanceAfter = IERC20(address(stakingtoken)).balanceOf(randomAddress); // Vemos el balance de token que tenemos al 
         
         assert(balanceAfter - balanceBefore == amount); // Comprobamos que balance final - balance inicial es igual a la diferencia
-        
+                               
         vm.stopPrank();
     }
 }
