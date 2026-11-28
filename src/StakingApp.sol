@@ -15,10 +15,13 @@ contract StakingApp is Ownable  {
      
     address public addressToken;
     uint256 public stakingPeriod;
+    mapping (address => uint256 ) public balances ;
+
 
 
     //Eventos
     event ChangeStakingPeriod ( uint256 NewStakingPeriodAfter);
+    event  DepositTokens(address from , uint256 amount);
 
     //Constructor
     constructor(address _addressToken, address _owner , uint256 _stakingPeriod ) Ownable(_owner) {
@@ -29,6 +32,21 @@ contract StakingApp is Ownable  {
 
 
     //External Functions
+
+
+    //1. Deposit 
+
+    function depositToken (uint256 _amount) external payable {
+
+        require (_amount == 0.01 ether);
+
+        balances[msg.sender] += _amount;
+
+        emit DepositTokens(msg.sender , _amount);
+    }
+
+
+
 
     function changeStakingPeriod (uint256 _newStakingPeriod) external  onlyOwner {
         
@@ -44,5 +62,8 @@ contract StakingApp is Ownable  {
 
 
     //Internal Functions
+
+
+
 
 }
